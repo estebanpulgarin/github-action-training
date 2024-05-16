@@ -16,6 +16,7 @@ jobs:
         run: echo "Esto es un mensaje para la training"
 
       - name: "Mensaje con variable y multiple linea"
+        if: ${{env.ambiente == 'test'}}
         run: |
           echo "ambiente: ${{env.ambiente}}"
           echo "proyecto: ${{env.proyecto}}"
