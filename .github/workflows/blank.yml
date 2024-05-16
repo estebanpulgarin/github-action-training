@@ -20,3 +20,8 @@ jobs:
         run: |
           echo "ambiente: ${{env.ambiente}}"
           echo "proyecto: ${{env.proyecto}}"
+      
+      - name: "Mostrando variables por defecto"
+        run: |
+          echo "Evento: ${{toJSON(github.event)}}"
+          echo "GITHUB_ACTOR: ${{GITHUB_ACTOR}}"
